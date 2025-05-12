@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vente de Pi Network</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        input, button {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+            font-size: 16px;
+        }
+
+        input {
+            background-color: #ffffff;
+        }
+
+        #proof {
+            border: none;
+        }
+
+        #hiddenButton {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #hiddenButton:hover {
+            background-color: #45a049;
+        }
+        #proof{
+            align-items: center;
+            margin: auto;
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <h1> Vente de Pi Network</h1>
+    <p>Prix actuel : <strong>1 PI = 300 €</strong></p>
+     <P><h2>notez bien le nombre de pi doit etre superieur a 2 PI</h2></P>
+
+    <label for="piAmount"> Nombre de Pi à vendre :</label><br>
+    <input type="number" id="piAmount" placeholder="Entrez le nombre" min="1" required><br>
+
+    <label for="price"> Prix souhaité :</label><br>
+    <input type="text" id="price" placeholder="Fixez votre prix" required><br>
+    <p><h1>le bouton s'activera directement apres avoir selectionné la capturend'écran</h1></p>
+
+    <label for="proof"> Capture d'écran du transfert :</label><br>
+    <input type="file" id="proof" accept="image/*"><br>
+
+    <button id="hiddenButton">✅ Valider la vente</button>
+
+    <script>
+        document.getElementById("proof").addEventListener("change", function() {
+            var hiddenButton = document.getElementById("hiddenButton");
+            if (this.files.length > 0) {
+                hiddenButton.style.display = "inline-block";
+            } else {
+                hiddenButton.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Télécharge Pi Network</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: plum;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .hidden {
+      display: none;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: aquamarine;
+      border-radius: 2%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1> pi network circle</h1>
+  <img src="IMAGE TEST.jpg" width="500" height="300" >
+    <p> <h2>miner du pi et faites vous des revenus passifs  juste télécharger pi network et insérer ce code en tant que parrain</h2> : <strong>TON_CODE_PARRAIN</strong></p>
+    <a href="https://minepi.com/Draken690" target="_blank">
+      <button>Télécharger Pi Network</button>
+    </a>
+
+    <hr>
+
+    <h2>Obtiens le fichier HA Tunnel</h2>
+    <p>Ajoute une preuve (capture d’écran) que tu as rejoint Pi Network :</p>
+    <input type="file" id="proofInput" accept="image/*">
+
+    <!-- Le bouton de téléchargement est caché tant qu'une image n'est pas choisie -->
+    <div id="downloadSection" class="hidden">
+      <p>Merci pour la preuve !</p>
+      <a href="fichier.hat" download>
+        <button>Télécharger le fichier HA Tunnel</button>
+      </a>
+    </div>
+
+    <hr>
+
+    <h2>Rejoins notre groupe WhatsApp</h2>
+    <a href="https://chat.whatsapp.com/JX8FLbUmnfxFbhiiCLWzzW" target="_blank">
+      <button>Entrer dans le groupe</button>
+    </a>
+    <button> vendre vos pi<a href="page suite.html"></a></button>
+  </div>
+
+  <script>
+    // Lorsque l'utilisateur sélectionne une image, on montre le bouton de téléchargement
+    const proofInput = document.getElementById('proofInput');
+    const downloadSection = document.getElementById('downloadSection');
+
+    proofInput.addEventListener('change', function() {
+      if (proofInput.files.length > 0) {
+        downloadSection.classList.remove('hidden');
+      } else {
+        downloadSection.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
